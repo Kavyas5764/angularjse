@@ -1,0 +1,242 @@
+<!-- <h1>Hello</h1>
+<h1>{{getName("Kavya")}}</h1>
+<button (click)="generate('Hurry')">Click me</button>
+<br/><br/>
+<input type ="text"(keydown) = "onKeyDownEvent($event)" placeholder="Event up"/>
+<br/><br/>
+<input type ="text"(keyup) = "onKeyUpEvent($event)" placeholder="Event down"/>
+<br/><br/>
+<input type ="text"(input) = "onKeyUpEvent($event)" placeholder="Event input"/>
+<br/><br/>
+<input type ="text"(keypress) = "onKeypressEvent($event)" placeholder="Event press"/>
+
+ -->
+ <!-- <h1>Hello</h1>
+ <input type="text" #box>
+ <button (click)="getVal(box.value)">Get Value</button> -->
+
+ <!-- <h1>Hello</h1>
+ <input type="text" value={{name}} disabled={{disabledBox}} placeholder="Input Text">
+ <input type="text" [value]="name" [disabled]="disabledBox" placeholder="Input Text">
+ <button (click)="enableInput()">Enable Me</button>
+ <br/><br/>
+ <input type="text" value={{placeholder}} disabled={{disabledBox1}} placeholder="Input placeholder">
+ <input type="text" [value]="placeholder" [disabled]="disabledBox1" placeholder="Input placeholder">
+ <button (click)="changeInput()">Change Input</button> -->
+
+
+
+ <!-- using ngIF -->
+ <!-- if day is not else will print -->
+ <!-- else part -->
+ <!-- <h1 *ngIF="day=='morning' else elseBlock">Hello</h1> 
+ <ng-template #elseBlock>
+     <h1>Bye</h1>
+ </ng-template> -->
+
+ <!-- using else block -->
+ <!-- <div *ngIf="isValid;  else InValid">Welcome</div>
+<ng-template #InValid>
+    The data is Invalid
+</ng-template> -->
+
+
+
+ <!-- examples using ngIF else: -->
+ <!-- <div *ngIf="isLoggedIn; then logIn; else logOut"></div>
+ <ng-template #logIn>
+    Hello, Kavya S
+</ng-template>
+<ng-template #logOut>
+    Please Signin
+</ng-template> -->
+
+
+<!-- <app-signup></app-signup> -->
+<!-- <app-surveyform></app-surveyform> -->
+
+<!-- 
+<h4 *ngFor="let name of names">
+{{name.fName}}
+{{name.age}}
+</h4> -->
+
+<!-- example 1 -->
+<!-- ngSwitch -->
+<!-- <ul [ngSwitch]="superhero">
+    <li *ngSwitchCase="'Ironman'">Ironman</li>
+    <li *ngSwitchCase="'Spiderman'">Spiderman</li>
+    <li *ngSwitchDefault>Batman</li>
+  </ul> -->
+
+<!-- example 2  class binding,property binding,event binding-->
+<!-- <ul class="nav nav-pills">
+    <li [class.active]="viewMode == 'map'"><a (click)="viewMode = 'map'">Map View</a></li>
+    <li [class.active]="viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
+</ul>
+
+<div  [ngSwitch]="viewMode">
+    <div *ngSwitchCase="'map'">Map View Content</div>
+    <div *ngSwitchCase="'list'">List View Content</div>
+    <div *ngSwitchDefault>Otherwise</div>
+</div> -->
+
+
+
+  <!-- <table border="1">
+      <tr>
+          <td>First_Name</td>
+          <td>Last_Name</td>
+          <td>Age</td>
+      </tr>
+      <tr *ngFor = "let name of names">
+          <td>{{name.First_Name}}</td>
+          <td>{{name.Last_Name}}</td>
+          <td>{{name.Age}}</td>
+      </tr>
+  </table> -->
+
+
+  <!-- using ngStyle:, in second line we can give only color also -->
+  <!-- <h1 style="color: brown">Hello</h1>
+<h1 [ngStyle]="{'color':'textColor'}">Hii</h1> -->
+<!-- <h1 [ngStyle]="{'color':textColor==='black'?'blue':'green'}">Hiii!!</h1> -->
+
+
+<!-- using ngClass -->
+<!-- <h1 [ngClass]="'changeColor bgColor'">Helooo!! </h1>
+<h1  [ngClass]="styleColor" >Heloooo!!</h1> -->
+<!-- property binding -->
+<!-- <h1  [ngClass]="styleColor === 'font'?'bgcolor':'changColor'">Welcomee!!</h1> -->
+
+
+<!-- <h2 [ngClass]="{available:isAvailable, unAvailale:!isAvailable}">My Product</h2> -->
+
+<!-- 
+<p>Passing an object to ngStyles:</p>
+<button [ngStyle]="{'background':'green'}">Button</button> -->
+
+
+
+
+
+
+
+<!-- <h1 appHighlight>Welcome to the page</h1>
+<h1>{{'UPPER' | lowercase}}</h1>
+<h1>{{'lower' | uppercase}}</h1>
+<h1>{{'1234' | currency}}</h1>
+<h1>{{dateExample | date}}</h1>
+<h1>{{'0.60' | percent}}</h1> -->
+
+<!-- parameterised pipes -->
+<!-- <h1>{{'123' | currency:'GBP'}}</h1>
+<h1>{{dateExample | date : 'long'}}</h1>
+<h1>{{dateExample | date : 'short'}}</h1>
+<h1>{{dateExample | date : 'dd-MM-yy'}}</h1>
+<h1>{{'0.607' | percent:'2.2-3'}}</h1> -->
+
+<!-- chaining pipes -->
+<!-- <h1>{{dateExample | date | uppercase}}</h1>
+<h1>{{'1234' | currency:'YEN' | lowercase}}</h1> -->
+
+<!-- Example of pipes: -->
+<!-- <h1 appHighlight>Student information Data</h1>
+<h1>{{'Jack' | uppercase}}</h1>
+<h1>{{'WELCOME' | lowercase}}</h1>
+<h1>{{dateExample | date : 'long'}}
+<h1>{{'0.80' | percent}}
+ <h1>{{'2670' | currency:'INR' | lowercase}}</h1>
+
+ -->
+
+<!-- <form (ngSubmit)="onSubmit(myForm)" #myform="ngForm">
+    <label for ="fname">First Name</label>
+    <input type="text" id="fname" name="fname">
+    <br>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname">
+    <br>
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age">
+    <br>
+    <button type="submit">Submit</button>
+</form> -->
+
+
+<!-- <form(ngSubmit)= "onSubmit(myForm)" #myform="ngform" >
+    <input type="text " ng-model="firstname">
+</form>
+<form>
+<input type="text" ng-model="lastname">
+</form>
+gender
+<input type="radio" ng-model="myVar" value="male">male
+<input type="radio" ng-model="myVar" value="female">Female
+</form> -->
+
+<!-- <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+    <label for="fname">First Name</label><br>
+    <input type="text" id="fname" name="fname" [(ngModel)]="fname" required minlength="3">
+    <br>
+    <label for="lname">Last Name</label><br>
+    <input type="text" id="lname" name="lname" [(ngModel)]="lname">
+    <br>
+    <label for="age">Age</label><br>
+    <input type="text" id="age" name="age" [(ngModel)]="age">
+    <br>
+    <input type="checkbox" name="terms" id="terms" [(ngModel)]="terms" required> I accept the terms & conditions
+    <br>
+    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+    <br>
+    <button (click) = "resetForm(myForm)">Reset</button>
+</form> -->
+<!-- 
+<form [formGroup]="myReactiveForm" (ngSubmit)= "onSubmit()">
+    <div class="container">
+    <div class="user-details">
+        <div class="input-box">
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" name="fname" [(ngModel)]="fname" required minlength="3">
+            </div>
+        <div class="input-box">
+             <label for="lname">Last Name</label><br>
+             <input type="text" id="lname" name="lname" [(ngModel)]="lname">
+            </div>
+        <div class="input-box">
+            <label for="lname">Email Address</label><br>
+            <input type="text" id="email" name="email" [(ngModel)]="email">
+            </div>
+        <div class="input-box">
+             <label for="lname">Password</label><br>
+              <input type="text" id="password" name="password" [(ngModel)]="password">
+            </div>
+        <button type="submit">Submit</button>
+    </div>
+</div>
+ </form> -->
+               
+    
+<nav class="navbar">
+    <div class=""><a href=""  class="linkitem">Home</a></div>
+    <div class=""><a href=""  class="linkitem">About</a></div>
+    <div class=""><a href=""  class="linkitem">Contact</a></div>
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
